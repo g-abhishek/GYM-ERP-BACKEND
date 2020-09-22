@@ -1,0 +1,111 @@
+import mongoose from '../../connect.js'
+
+const Schema = mongoose.Schema
+const model = mongoose.model
+
+
+const Registration = new Schema({
+    address:{
+        type:String,
+        required:true
+    },
+    batch:{
+        type:String,
+        required:true
+    },
+    contact:{
+        type:String,
+        required:true
+    },
+    customerName:{
+        type:String,
+        required:true
+    },
+    dietPlan:{
+        type:String,
+        required:true
+    },
+    dob:{
+        type:Date,
+        required:true
+    },
+    startDate:{
+        type:Date,
+        required:true
+    },
+    endDate:{
+        type:Date,
+        required:true
+    },
+    email:{
+        type:String,
+        required:true
+    },
+    fathersName:{
+        type:String,
+        required:true
+    },
+    fitnessGoal:{
+        type:String,
+        required:true
+    },
+    gender:{
+        type:String,
+        required:true
+    },
+    height:{
+        type:Number,
+    },
+    height2:{
+        type:Number,
+        required:true
+    },
+    joiningDate:{
+        type:Date,
+        required:true
+    },
+    nutrients:{
+        type:String,
+        required:true
+    },
+    picture:{
+        type:String
+    },
+    urn:{
+        type:Number,
+        required:true
+    },
+    weight:{
+        type:Number,
+    },
+    weight2:{
+        type:Number,
+        required:true
+    },
+    package:{
+        type:String,
+        required:true
+    },
+    amount:{
+        type:Number,
+        required:true
+    },
+    otp:{
+        type:Number,
+        required:true
+    },
+    createdBy:{
+        type:String,
+        required:true
+    },
+    updatedBy:{
+        type:String,
+        required:true
+    },
+    role:{
+        type: String,
+        default:'customer'
+    }
+},({timestamps:true}))
+
+export default model('Registration' ,Registration)
